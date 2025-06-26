@@ -1,0 +1,14 @@
+body {
+    margin:0;
+    background-color: #f0f0f0;
+}
+
+/* * {
+    font-family: 'Noto Sans KR', sans-serif;
+  } */
+
+  * {
+    box-sizing: border-box; /* 오페라(Opera) */
+-moz-box-sizing: border-box; /* 파이어폭스(Firefox)*/
+-webkit-box-sizing: border-box;
+  }
