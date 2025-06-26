@@ -8,6 +8,11 @@ import { BrowserRouter } from "react-router-dom";
 import { createClient } from "@supabase/supabase-js";
 import { useNavigate } from "react-router-dom";
 
+const supabase = createClient(
+  process.env.REACT_APP_SUPABASE_URL,
+  process.env.REACT_APP_SUPABASE_KEY
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -26,10 +31,7 @@ const useAuthStateChange = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const { data: listener } = createClient(
-      process.env.REACT_APP_SUPABASE_URL,
-      process.env.REACT_APP_SUPABASE_KEY
-    ).auth.onAuthStateChange(
+    const { data: listener } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         console.log(event, session);
       }

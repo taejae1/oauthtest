@@ -31,7 +31,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://public-afant.github.io/learnmate-ai/",
+  "homepage": "https://taejae1.github.io/oauthtest",
   "eslintConfig": {
     "extends": [
       "react-app",
